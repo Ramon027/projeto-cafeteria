@@ -29,15 +29,14 @@
 
 .logo {
     width: 100px;
-    width: 285px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     
 } 
 .logo img{
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
 }
 .secao-links{
   width: 385px;
@@ -96,6 +95,11 @@ h1{
 .secao-informacoes{
     width: 100%;
     padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
    
 }
 .texto{
@@ -105,6 +109,10 @@ h1{
     line-height: 34px;
     color: #666;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 1024px;
 }
 .texto h2{
     font-family: 'Oswald', sans-serif;
@@ -116,8 +124,11 @@ h1{
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     padding: 0px 20px;
-    max-width: 1024px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 0 1 1024px;
+
     
     
 }
@@ -126,6 +137,7 @@ h1{
    background-position: center;
    background-size: cover;
    background-attachment: fixed;
+   
 }
 
 .parallax2{
@@ -216,45 +228,57 @@ iframe{
 }
 
 .secao-horarios{
+    padding: 100px 20px ;
     background-image: url(img/cafeteria.jpg);
     height: 85vh;
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
    
 }
 .secao-horarios h2{
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
     color: white;
-    position: absolute;
-    top: 20%;
-    left: 43%;
+    margin-bottom: 30px;
+}
+.lista-horarios{
+    width: 100%;
+    max-width: 768px;
 }
 
-.lista li { /* itens da lista */
-    position: relative;
+
+.lista-horarios li { /* itens da lista */
+    margin-bottom: 15px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     
 }
 .lista li h3{
     color: white;
+    flex: 0 1 80px;
 }
 
-.lista li div { /* tarja */
-    width: 70%;
+.lista-horarios li div { /* tarja */
+   /* width: 70%;*/
     height: 1px;
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 50%;
-    background-color: #acacac
+    background-color: #acacac;
+    flex: 1 1 auto;
 }
 
-.lista li p { /* parágrafos */
-    position: absolute;
-    top: 0;
-    right: 0;
+.lista li span, p { /* parágrafos */
+    flex: 0 1 100px;
+    text-align: right;
+    
+}
+.lista li span p {
+    color: #c4a47c;
 
 }
